@@ -43,8 +43,6 @@ const InputField = ({
 }: InputPropsType) => {
   function handlepropsFunction(name: string, inputData: string) {
     inputHandler({ [name]: inputData });
-
-    // return {name:inputData};
   }
 
   const [errorState, setErrorState] = useState(false);

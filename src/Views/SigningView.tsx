@@ -171,7 +171,6 @@ const Signing = ({ state, setState }: SigningProps) => {
       )}
       {alertStatus.isAlert && (
         <AlertList error={alertStatus.isError}>
-          {/* <li>Du har nu blivit registerad. Nu kan du logga in!</li> */}
           {alerts.map((alert) => (
             <li>{alert}</li>
           ))}
@@ -182,8 +181,3 @@ const Signing = ({ state, setState }: SigningProps) => {
 };
 
 export default Signing;
-
-// <AlertList error={true}>
-//   <li>Användarnamnet är upptaget</li>
-//   <li>Lösenorden stämmer inte överens</li>
-// </AlertList>
