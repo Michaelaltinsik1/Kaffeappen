@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from "react";
+// import InputField from './Components/InputField';
+// import Button from './Components/Button';
+import SiteHeading from "./Components/SiteHeading";
+import SigningView from "./Views/SigningView";
+import "./App.css";
 function App() {
+  const [state, setState] = useState("mainPage");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      {state === "mainPage" ? (
+        <SiteHeading>KaffeAppen</SiteHeading>
+      ) : (
+        <SiteHeading>Register</SiteHeading>
+      )}
+      {/* <InputField placeholder='Username'/>
+      <InputField placeholder='Password'/>
+      <Button>Sign in</Button>
+      <Button>Register</Button> */}
+      <SigningView state={state} setState={setState}></SigningView>
     </div>
   );
 }
